@@ -23,8 +23,8 @@ def minimumSwaps(arr):
 
     Notes
     -----
-    The algorithm is basically a modified bubble sort.
-    Adding count for tracking the chaotic case.
+    The algorithm is basically a modified selection sort.
+    Adding count for tracking swaps.
 
     This solution will have a timeout issue on HackerRank
     due to selection sort's O(n^2) complexity. It wouldn't give
@@ -36,7 +36,7 @@ def minimumSwaps(arr):
 
     References
     ----------
-    https://en.wikipedia.org/wiki/Bubble_sort
+    https://en.wikipedia.org/wiki/Selection_sort
     """
     swaps = 0
     for i in range(len(arr)-1):
