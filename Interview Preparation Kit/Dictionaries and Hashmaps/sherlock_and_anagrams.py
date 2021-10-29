@@ -33,9 +33,9 @@ def sherlockAndAnagrams(s):
         for i in range(0, len(s)):
             # if s[i:i+char_num] == s[i:i+char_num][::-1]:
             for j in range(len(s)-1, -1, -1):
-                if s[i:i+char_num] =
-
-                anagrams += 1
+                if s[i:i+char_num] == s[j-char_num:j]:
+                    anagrams += 1
+                    
         char_num += 1
 
 
