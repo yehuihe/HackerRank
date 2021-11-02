@@ -35,7 +35,7 @@ def makeAnagram(a, b):
 
     count_a = Counter(a)
     count_b = Counter(b)
-    count_a.subtract(count_b)
+    # count_a.subtract(count_b)
     return sum(abs(v) for v in count_a.values())
 
 
