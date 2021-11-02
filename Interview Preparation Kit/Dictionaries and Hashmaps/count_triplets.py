@@ -33,35 +33,27 @@ def countTriplets(arr, r):
     # return triplets
 
     triplets = 0
-    # # Construct value counting record
-    # record = {}
-    # for v in arr:
-    #     if v not in record:
-    #         record[v] = 0
-    #     record[v] += 1
+    # Construct value counting record
+    record = {}
+    for v in arr:
+        if v not in record:
+            record[v] = 0
+        record[v] += 1
+
+    record_sec = {}
+    for v in arr:
+        if v not in record_sec:
+            record_sec[v] = 0
 
     # Looping over arr and select second number as pivot.
     # Calculate left and right number of pivot
-    for i, v in enumerate(arr):
-        first = v / r
+    for v in arr:
+        first = v // r
         third = v * r
-        ########
-        num_of_first = 0
-        for u in arr[:i]:
-            if u == first:
-                num_of_first += 1
-        # if not record.get(first):
-        #     num_of_first = 0
-        # else:
-        #     num_of_first = record.get(first)
-        ########
-        num_of_third = 0
-        for u in arr[i+1:]:
-            if u == third:
-                num_of_third += 1
-        # num_of_first = 0 if not record.get(first) else record.get(first)
-        # num_of_third = 0 if not record.get(third) else record.get(third)
-        triplets  += num_of_first * num_of_third
+        record[v] -= 1
+        if record_sec.get(first) and record.get(third) and v % r == 0:
+            triplets += record_sec[first] * record[third]
+        record_sec[v] += 1
     return triplets
 
 
