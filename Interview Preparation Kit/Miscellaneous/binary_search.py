@@ -145,7 +145,17 @@ def binary_search_duplicate(A, n, T, method='leftmost'):
     Returns
     -------
     index : int or None
-        int if target was found else none.
+        If method="leftmost":
+
+        If L < n and A[L] = T, then A[L] is the leftmost element that equals T.
+        Even if T is not in the array, L is the rank of L in the array,
+        or the number of elements in the array that are less than T.
+
+        If method="rightmost":
+
+        If L > 0 and A[L-1] = T then A[L-1] is the rightmost element that equals T.
+        Even if T is not in the array, (n-1)-L is the number of elements
+        in the array that are greater than T.
 
     Notes
     -----
@@ -188,9 +198,10 @@ def binary_search_duplicate(A, n, T, method='leftmost'):
 if __name__ == '__main__':
     # A = [1, 2, 3, 4, 4, 5, 6, 7]  # duplicated case
     # A = [3, 5, 1, 4, 2, 6]          # unordered case
-    A = [1, 2, 3, 4, 7, 8, 10, 11, 13, 14, 15]
+    # A = [1, 2, 3, 4, 7, 8, 10, 11, 13, 14, 15]
+    A = [80, 90, 100]
 
-    T = 5
+    T = 105
     # result = binary_search(A, len(A), T)
     result = binary_search_duplicate(A, len(A), T, method='leftmost')
     print("result: %s" % result)

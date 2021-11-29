@@ -87,8 +87,41 @@ def successor(A, n, T):
     For successor queries, the procedure for finding the rightmost element
     can be used. If the result of running the procedure for the target value
     is r, its predecessor is r+1.
+
+    References
+    ----------
+    Lin, Anthony.
+        "Binary search algorithm." WikiJournal of Science, 2019, 2(1):5
+        doi: 10.15347/wjs/2019.005 Encyclopedic Review Article
     """
     return binary_search_duplicate(A, n, T, method='rightmost') + 1
+
+
+def nearest_neighbor(A, n, T):
+    """Find nearest neighbor of the target value
+
+    Parameters
+    ----------
+    A : array-like of shape (, n)
+        The input sorted array.
+
+    n : int
+        The length of A.
+
+    T : int
+        The target value.
+
+    Returns
+    -------
+    nearest_neighbor : int
+        Target value's predecessor or successor, whichever is closer.
+
+    References
+    ----------
+    Lin, Anthony.
+        "Binary search algorithm." WikiJournal of Science, 2019, 2(1):5
+        doi: 10.15347/wjs/2019.005 Encyclopedic Review Article
+    """
 
 
 
