@@ -18,8 +18,9 @@ import sys
 #  6. INTEGER_ARRAY oranges
 #
 
+
 def countApplesAndOranges(s, t, a, b, apples, oranges):
-    """ Count apples and oranges solution
+    """Count apples and oranges solution
 
     Parameters
     ----------
@@ -55,7 +56,7 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
     print(orange_count)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     first_multiple_input = input().rstrip().split()
 
     s = int(first_multiple_input[0])

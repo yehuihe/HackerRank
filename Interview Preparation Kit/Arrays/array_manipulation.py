@@ -39,13 +39,15 @@ def arrayManipulation(n, queries):
     """
     temp = [0] * n
     for query in queries:
-        a = query[0]-1; b = query[1]-1; k = query[2]
-        for i in range(a, b+1):
+        a = query[0] - 1
+        b = query[1] - 1
+        k = query[2]
+        for i in range(a, b + 1):
             temp[i] += k
     return max(temp)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     first_multiple_input = input().rstrip().split()
@@ -61,7 +63,7 @@ if __name__ == '__main__':
 
     result = arrayManipulation(n, queries)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 

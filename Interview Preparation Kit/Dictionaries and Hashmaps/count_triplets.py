@@ -57,8 +57,7 @@ def countTriplets(arr, r):
     return triplets
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     nr = input().rstrip().split()
@@ -71,7 +70,7 @@ if __name__ == '__main__':
 
     ans = countTriplets(arr, r)
 
-    print('result: %s' % ans)
+    print("result: %s" % ans)
 
     # fptr.write(str(ans) + '\n')
 

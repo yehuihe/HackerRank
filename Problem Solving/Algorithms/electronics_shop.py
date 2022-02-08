@@ -30,11 +30,13 @@ def getMoneySpent(keyboards, drives, b):
         not possible to buy both items.
     """
 
-    spent = [sum(v) for v in itertools.product(keyboards, drives) if sum(v) <= b]
+    spent = [
+        sum(v) for v in itertools.product(keyboards, drives) if sum(v) <= b
+    ]
     return max(spent) if spent else -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     bnm = input().split()
@@ -55,7 +57,7 @@ if __name__ == '__main__':
 
     moneySpent = getMoneySpent(keyboards, drives, b)
 
-    print('result: %s' % moneySpent)
+    print("result: %s" % moneySpent)
 
     # fptr.write(str(moneySpent) + '\n')
     #

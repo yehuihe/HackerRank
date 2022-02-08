@@ -15,6 +15,7 @@ import sys
 #  2. LONG_INTEGER n
 #
 
+
 def repeatedString(s, n):
     """Find repeated string
 
@@ -32,10 +33,10 @@ def repeatedString(s, n):
     """
     # formula for counting is: freq(a) * n // len(s) for fully repeated string
     # adding partial string with length n mod len(s)
-    return s.count('a') * (n // len(s)) + s[0:n % len(s)].count('a')
+    return s.count("a") * (n // len(s)) + s[0 : n % len(s)].count("a")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     s = input()
@@ -44,7 +45,7 @@ if __name__ == '__main__':
 
     result = repeatedString(s, n)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 

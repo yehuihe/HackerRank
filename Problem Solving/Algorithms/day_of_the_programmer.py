@@ -13,13 +13,17 @@ import sys
 # The function accepts INTEGER year as parameter.
 #
 
+
 def _is_julian_leap(year):
     return True if year % 4 == 0 else False
 
 
 def _is_gregorian_leap(year):
-    return True if year % 400 == 0 or \
-                   (year % 4 == 0 and year % 100 != 0) else False
+    return (
+        True
+        if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0)
+        else False
+    )
 
 
 def dayOfProgrammer(year):
@@ -37,25 +41,27 @@ def dayOfProgrammer(year):
         in the format dd.mm.yyyy, where dd is the two-digit day,
         mm is the two-digit month, and yyyy is y.
     """
-    d = '13'; m = '09'; y = str(year)
+    d = "13"
+    m = "09"
+    y = str(year)
     if year == 1918:
-        d = '26'
+        d = "26"
     elif year < 1918 and _is_julian_leap(year):
-        d = '12'
+        d = "12"
     else:
         if _is_gregorian_leap(year):
-            d = '12'
-    return '.'.join((d, m, y))
+            d = "12"
+    return ".".join((d, m, y))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     year = int(input().strip())
 
     result = dayOfProgrammer(year)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(result + '\n')
 

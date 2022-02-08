@@ -13,6 +13,7 @@ import sys
 # The function accepts 2D_INTEGER_ARRAY s as parameter.
 #
 
+
 def formingMagicSquare(s):
     """Forming a Magic Square solution
 
@@ -26,12 +27,9 @@ def formingMagicSquare(s):
     min_cost : int
         The minimal total cost of converting the input square to a magic square.
     """
-    
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     s = []
@@ -41,7 +39,7 @@ if __name__ == '__main__':
 
     result = formingMagicSquare(s)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 

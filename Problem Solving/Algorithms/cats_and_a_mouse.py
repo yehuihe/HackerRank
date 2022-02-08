@@ -8,7 +8,7 @@ import sys
 
 # Complete the catAndMouse function below.
 def catAndMouse(x, y, z):
-    """ Cats and a Mouse solution
+    """Cats and a Mouse solution
 
     Parameters
     ----------
@@ -27,15 +27,14 @@ def catAndMouse(x, y, z):
         Either 'Cat A', 'Cat B', or 'Mouse C'
     """
     if abs(x - z) > abs(y - z):
-        return 'Cat B'
+        return "Cat B"
     elif abs(x - z) < abs(y - z):
-        return 'Cat A'
+        return "Cat A"
     else:
-        return 'Mouse C'
+        return "Mouse C"
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     q = int(input())
@@ -51,7 +50,7 @@ if __name__ == '__main__':
 
         result = catAndMouse(x, y, z)
 
-        print('result: %s' % result)
+        print("result: %s" % result)
 
         # fptr.write(result + '\n')
 

@@ -38,14 +38,14 @@ def checkMagazine(magazine, note):
         mag_words[word] += 1
     for word in note:
         if word not in mag_words:
-            print('No')
+            print("No")
             return
         else:
             mag_words[word] -= 1
             if mag_words[word] < 0:
-                print('No')
+                print("No")
                 return
-    print('Yes')
+    print("Yes")
     # Alternatively, making another note_words works as well
     #
     # mag_words = {}; note_words = {}
@@ -64,7 +64,7 @@ def checkMagazine(magazine, note):
     # print('Yes')
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     first_multiple_input = input().rstrip().split()
 
     m = int(first_multiple_input[0])

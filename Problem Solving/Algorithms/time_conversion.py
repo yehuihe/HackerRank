@@ -13,6 +13,7 @@ import sys
 # The function accepts STRING s as parameter.
 #
 
+
 def timeConversion(s):
     """Time conversion solution
 
@@ -25,23 +26,25 @@ def timeConversion(s):
     -------
 
     """
-    split_clock = s[:-2].split(':')
-    hh = split_clock[0]; mm = split_clock[1]; ss = split_clock[2]
+    split_clock = s[:-2].split(":")
+    hh = split_clock[0]
+    mm = split_clock[1]
+    ss = split_clock[2]
     am_pm = s[-2:]
-    if am_pm == 'AM':
-        return str(int(hh) % 12).zfill(2) + ':' + mm + ':' +ss
+    if am_pm == "AM":
+        return str(int(hh) % 12).zfill(2) + ":" + mm + ":" + ss
     else:
-        return str(12 + int(hh) % 12).zfill(2) + ':' + mm + ':' +ss
+        return str(12 + int(hh) % 12).zfill(2) + ":" + mm + ":" + ss
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     s = input()
 
     result = timeConversion(s)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(result + '\n')
 

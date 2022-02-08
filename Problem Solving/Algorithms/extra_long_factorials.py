@@ -12,8 +12,9 @@ import sys
 # The function accepts INTEGER n as parameter.
 #
 
+
 def extraLongFactorials(n):
-    """ Extra long factorials solution
+    """Extra long factorials solution
 
     Parameters
     ----------
@@ -25,11 +26,13 @@ def extraLongFactorials(n):
     factorial : int
         Factorials of n
     """
-    if n == 0: return 1
-    else: return n * extraLongFactorials(n-1)
+    if n == 0:
+        return 1
+    else:
+        return n * extraLongFactorials(n - 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     n = int(input().strip())
 
     print(extraLongFactorials(n))

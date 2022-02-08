@@ -15,6 +15,7 @@ import sys
 #  2. STRING word
 #
 
+
 def designerPdfViewer(h, word):
     """Designer PDF Viewer solution
 
@@ -33,12 +34,12 @@ def designerPdfViewer(h, word):
     """
     tallest_height = 0
     for c in word:
-        if h[ord(c)-97] > tallest_height:
-            tallest_height = h[ord(c)-97]
+        if h[ord(c) - 97] > tallest_height:
+            tallest_height = h[ord(c) - 97]
     return tallest_height * len(word)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     h = list(map(int, input().rstrip().split()))
@@ -47,7 +48,7 @@ if __name__ == '__main__':
 
     result = designerPdfViewer(h, word)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 

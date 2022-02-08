@@ -43,9 +43,9 @@ def binary_search(A, n, T):
         doi: 10.15347/wjs/2019.005 Encyclopedic Review Article
     """
     if not isinstance(A, Sequence) or isinstance(A, str):
-        raise ValueError('input A must be a sequence')
+        raise ValueError("input A must be a sequence")
     if n < 0:
-        raise ValueError('length of the array must be non-negative')
+        raise ValueError("length of the array must be non-negative")
 
     L = 0
     R = n - 1
@@ -107,9 +107,9 @@ def binary_search_alternative(A, n, T):
         doi: 10.15347/wjs/2019.005 Encyclopedic Review Article
     """
     if not isinstance(A, Sequence) or isinstance(A, str):
-        raise ValueError('input A must be a sequence')
+        raise ValueError("input A must be a sequence")
     if n < 0:
-        raise ValueError('length of the array must be non-negative')
+        raise ValueError("length of the array must be non-negative")
 
     L = 0
     R = n - 1
@@ -124,7 +124,7 @@ def binary_search_alternative(A, n, T):
     return None
 
 
-def binary_search_duplicate(A, n, T, method='leftmost'):
+def binary_search_duplicate(A, n, T, method="leftmost"):
     """Binary Search algorithm with duplicate elements modification
 
     Parameters
@@ -169,15 +169,15 @@ def binary_search_duplicate(A, n, T, method='leftmost'):
         doi: 10.15347/wjs/2019.005 Encyclopedic Review Article
     """
     if not isinstance(A, Sequence) or isinstance(A, str):
-        raise ValueError('input A must be a sequence')
+        raise ValueError("input A must be a sequence")
     if n < 0:
-        raise ValueError('length of the array must be non-negative')
-    if method not in ['leftmost', 'rightmost']:
-        raise ValueError('method must either be leftmost or rightmost')
+        raise ValueError("length of the array must be non-negative")
+    if method not in ["leftmost", "rightmost"]:
+        raise ValueError("method must either be leftmost or rightmost")
 
     L = 0
     R = n
-    if method == 'leftmost':
+    if method == "leftmost":
         while L < R:
             m = (L + R) // 2
             if A[m] < T:
@@ -195,7 +195,7 @@ def binary_search_duplicate(A, n, T, method='leftmost'):
         return L - 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # A = [1, 2, 3, 4, 4, 5, 6, 7]  # duplicated case
     # A = [3, 5, 1, 4, 2, 6]          # unordered case
     # A = [1, 2, 3, 4, 7, 8, 10, 11, 13, 14, 15]
@@ -203,5 +203,5 @@ if __name__ == '__main__':
 
     T = 105
     # result = binary_search(A, len(A), T)
-    result = binary_search_duplicate(A, len(A), T, method='leftmost')
+    result = binary_search_duplicate(A, len(A), T, method="leftmost")
     print("result: %s" % result)

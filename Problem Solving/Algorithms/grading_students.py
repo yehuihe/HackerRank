@@ -13,6 +13,7 @@ import sys
 # The function accepts INTEGER_ARRAY grades as parameter.
 #
 
+
 def gradingStudents(grades):
     """Grading students solution
 
@@ -38,8 +39,7 @@ def gradingStudents(grades):
     return final_grade
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     grades_count = int(input().strip())
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
     result = gradingStudents(grades)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write('\n'.join(map(str, result)))
     # fptr.write('\n')

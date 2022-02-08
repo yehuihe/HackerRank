@@ -13,6 +13,7 @@ import sys
 # The function accepts INTEGER_ARRAY c as parameter.
 #
 
+
 def jumpingOnClouds(c):
     """Jumping on the Clouds
 
@@ -28,13 +29,13 @@ def jumpingOnClouds(c):
     """
     jumps = 0
     curr = 0
-    while curr != len(c)-1:
-        curr += 2 if curr+2 <= len(c)-1 and c[curr+2] != 1 else 1
+    while curr != len(c) - 1:
+        curr += 2 if curr + 2 <= len(c) - 1 and c[curr + 2] != 1 else 1
         jumps += 1
     return jumps
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     n = int(input().strip())
@@ -43,7 +44,7 @@ if __name__ == '__main__':
 
     result = jumpingOnClouds(c)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 

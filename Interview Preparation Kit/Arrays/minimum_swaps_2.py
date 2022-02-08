@@ -39,13 +39,13 @@ def minimumSwaps(arr):
     https://en.wikipedia.org/wiki/Selection_sort
     """
     swaps = 0
-    for i in range(len(arr)-1):
+    for i in range(len(arr) - 1):
         # Find the min element in the unsorted arr[0, len(arr)-1]
 
         # Assume the min is the first element
         min = i
         # Test against elements after i to find the smallest
-        for j in range(i+1, len(arr)):
+        for j in range(i + 1, len(arr)):
             if arr[j] < arr[min]:
                 min = j
 
@@ -55,7 +55,7 @@ def minimumSwaps(arr):
     return swaps
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     n = int(input())
@@ -64,7 +64,7 @@ if __name__ == '__main__':
 
     res = minimumSwaps(arr)
 
-    print('result: %s' % res)
+    print("result: %s" % res)
 
     # fptr.write(str(res) + '\n')
 

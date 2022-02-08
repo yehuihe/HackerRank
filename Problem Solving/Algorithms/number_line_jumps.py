@@ -17,6 +17,7 @@ import sys
 #  4. INTEGER v2
 #
 
+
 def kangaroo(x1, v1, x2, v2):
     """Number line jumps solution
 
@@ -40,14 +41,18 @@ def kangaroo(x1, v1, x2, v2):
         Either YES or NO.
     """
     if x1 == x2 and v1 == v2:
-        return 'YES'
+        return "YES"
     elif v1 == v2:
-        return 'NO'
+        return "NO"
     else:
-        return 'YES' if (x2 - x1) % (v1 - v2) == 0 and (x2 - x1) / (v1 - v2) > 0 else 'NO'
+        return (
+            "YES"
+            if (x2 - x1) % (v1 - v2) == 0 and (x2 - x1) / (v1 - v2) > 0
+            else "NO"
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     first_multiple_input = input().rstrip().split()
@@ -62,7 +67,7 @@ if __name__ == '__main__':
 
     result = kangaroo(x1, v1, x2, v2)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(result + '\n')
 

@@ -15,6 +15,7 @@ import sys
 #  2. INTEGER d
 #
 
+
 def rotLeft(a, d):
     """Left rotate the given array by d
 
@@ -37,7 +38,8 @@ def rotLeft(a, d):
         b[j] = a[i]
     return b
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     first_multiple_input = input().rstrip().split()
@@ -50,7 +52,7 @@ if __name__ == '__main__':
 
     result = rotLeft(a, d)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(' '.join(map(str, result)))
     # fptr.write('\n')

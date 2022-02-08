@@ -15,6 +15,7 @@ import sys
 #  3. INTEGER b
 #
 
+
 def bonAppetit(bill, k, b):
     """Bill Division solution
 
@@ -37,12 +38,12 @@ def bonAppetit(bill, k, b):
     _ = bill.pop(k)
     actual_bill = sum(bill) // 2
     if b == actual_bill:
-        return 'Bon Appetit'
+        return "Bon Appetit"
     else:
         return b - actual_bill
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     first_multiple_input = input().rstrip().split()
 
     n = int(first_multiple_input[0])

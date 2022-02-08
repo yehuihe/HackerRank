@@ -29,8 +29,10 @@ def breakingRecords(scores):
         Index  is for breaking most points records,
         and index  is for breaking least points records.
     """
-    curr_min = scores[0]; curr_max = scores[0]
-    min_num = 0; max_num = 0
+    curr_min = scores[0]
+    curr_max = scores[0]
+    min_num = 0
+    max_num = 0
     for score in scores[1:]:
         if score < curr_min:
             min_num += 1
@@ -41,7 +43,7 @@ def breakingRecords(scores):
     return [max_num, min_num]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     n = int(input().strip())
@@ -50,7 +52,7 @@ if __name__ == '__main__':
 
     result = breakingRecords(scores)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(' '.join(map(str, result)))
     # fptr.write('\n')

@@ -64,7 +64,7 @@ def climbingLeaderboard(ranked, player):
     return rank
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     ranked_count = int(input().strip())
@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
     result = climbingLeaderboard(ranked, player)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write('\n'.join(map(str, result)))
     # fptr.write('\n')

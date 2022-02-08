@@ -15,6 +15,7 @@ import sys
 #  2. INTEGER_ARRAY ar
 #
 
+
 def sockMerchant(n, ar):
     """sockMerchant function
 
@@ -38,16 +39,15 @@ def sockMerchant(n, ar):
             for j in range(i, n):
                 if ar[j] == v:
                     count += 1
-            pairs += (count // 2)
+            pairs += count // 2
             sock_colors.add(v)
     return pairs
     # One liner
     # return sum([ar.count(i) // 2 for i in set(ar)])
 
 
-
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     n = int(input().strip())
 
@@ -55,6 +55,6 @@ if __name__ == '__main__':
 
     result = sockMerchant(n, ar)
 
-    fptr.write(str(result) + '\n')
+    fptr.write(str(result) + "\n")
 
     fptr.close()

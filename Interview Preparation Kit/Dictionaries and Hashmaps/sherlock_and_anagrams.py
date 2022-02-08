@@ -32,15 +32,15 @@ def sherlockAndAnagrams(s):
     while True:
         for i in range(0, len(s)):
             # if s[i:i+char_num] == s[i:i+char_num][::-1]:
-            for j in range(len(s)-1, -1, -1):
-                if s[i:i+char_num] == s[j-char_num:j]:
+            for j in range(len(s) - 1, -1, -1):
+                if s[i : i + char_num] == s[j - char_num : j]:
                     anagrams += 1
-                    
+
         char_num += 1
 
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     q = int(input().strip())
 
@@ -49,6 +49,6 @@ if __name__ == '__main__':
 
         result = sherlockAndAnagrams(s)
 
-        fptr.write(str(result) + '\n')
+        fptr.write(str(result) + "\n")
 
     fptr.close()

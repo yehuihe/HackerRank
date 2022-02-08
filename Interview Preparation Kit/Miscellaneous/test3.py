@@ -1,4 +1,3 @@
-
 def solution(R):
     N = len(R)
     M = len(R[0])
@@ -7,8 +6,8 @@ def solution(R):
     grid = {}
     for i in range(N):
         for j in range(M):
-            if A[i][j] == 'X':
-                grid[(i, j)] = 'X'
+            if A[i][j] == "X":
+                grid[(i, j)] = "X"
             else:
                 grid[(i, j)] = 0
     #  (0, 0) always visited
@@ -19,13 +18,14 @@ def solution(R):
     left = False
     up = False
 
-    i = 0; j = 0
+    i = 0
+    j = 0
     # Reconsider break case
     count = 0
     while count < 1000:
         turned = False
         if right and not turned:
-            if j == M-1 or grid[(i, j+1)] == 'X':
+            if j == M - 1 or grid[(i, j + 1)] == "X":
                 right = False
                 down = True
                 turned = True
@@ -36,7 +36,7 @@ def solution(R):
             count += 1
 
         if down and not turned:
-            if i == N-1 or grid[(i+1, j)] == 'X':
+            if i == N - 1 or grid[(i + 1, j)] == "X":
                 down = False
                 left = True
                 turned = True
@@ -47,7 +47,7 @@ def solution(R):
             count += 1
 
         if left and not turned:
-            if j == 0 or grid[(i, j-1)] == 'X':
+            if j == 0 or grid[(i, j - 1)] == "X":
                 left = False
                 up = True
                 turned = True
@@ -58,7 +58,7 @@ def solution(R):
             count += 1
 
         if up and not turned:
-            if i == 0 or grid[(i-1, j)] == 'X':
+            if i == 0 or grid[(i - 1, j)] == "X":
                 up = False
                 right = True
                 turned = True
@@ -70,13 +70,20 @@ def solution(R):
 
     sum = 0
     for v in grid.values():
-        if v != 0 and v != 'X':
+        if v != 0 and v != "X":
             sum += 1
 
     return sum
 
 
-if __name__ == '__main__':
-    A = ['....X...', '........', '........', '..X.....', '........',
-         '........', '.X......'] # Answer: 22
+if __name__ == "__main__":
+    A = [
+        "....X...",
+        "........",
+        "........",
+        "..X.....",
+        "........",
+        "........",
+        ".X......",
+    ]  # Answer: 22
     print(solution(A))

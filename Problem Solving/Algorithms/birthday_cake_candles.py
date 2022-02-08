@@ -13,6 +13,7 @@ import sys
 # The function accepts INTEGER_ARRAY candles as parameter.
 #
 
+
 def birthdayCakeCandles(candles):
     """Birthday cake candles solution
 
@@ -37,8 +38,7 @@ def birthdayCakeCandles(candles):
     return count
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     candles_count = int(input().strip())
@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     result = birthdayCakeCandles(candles)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 

@@ -13,6 +13,7 @@ import sys
 # The function accepts STRING s as parameter.
 #
 
+
 def alternatingCharacters(s):
     """Alternating characters
 
@@ -22,13 +23,13 @@ def alternatingCharacters(s):
         A string.
     """
     deletions = 0
-    for i in range(len(s)-1):
+    for i in range(len(s) - 1):
         if s[i] == s[i + 1]:
             deletions += 1
     return deletions
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     q = int(input().strip())

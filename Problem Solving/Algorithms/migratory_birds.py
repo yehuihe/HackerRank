@@ -13,6 +13,7 @@ import sys
 # The function accepts INTEGER_ARRAY arr as parameter.
 #
 
+
 def migratoryBirds(arr):
     """Migratory Birds solution
 
@@ -46,7 +47,7 @@ def migratoryBirds(arr):
     return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     arr_count = int(input().strip())
@@ -55,7 +56,7 @@ if __name__ == '__main__':
 
     result = migratoryBirds(arr)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 

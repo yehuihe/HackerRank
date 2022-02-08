@@ -15,6 +15,7 @@ import sys
 #  2. STRING path
 #
 
+
 def countingValleys(steps, path):
     """Counting valleys
 
@@ -37,7 +38,7 @@ def countingValleys(steps, path):
     level = 0
     is_valley = False
     for p in path:
-        level = level + 1 if p == 'U' else level - 1
+        level = level + 1 if p == "U" else level - 1
         if level == -1 and not is_valley:
             is_valley = True
         if is_valley and level == 0:
@@ -47,7 +48,7 @@ def countingValleys(steps, path):
     return valleys
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     steps = int(input().strip())
@@ -56,7 +57,7 @@ if __name__ == '__main__':
 
     result = countingValleys(steps, path)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
     #

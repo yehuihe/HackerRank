@@ -33,11 +33,11 @@ def twoStrings(s1, s2):
     """
     for c1 in s1:
         if c1 in s2:
-            return 'YES'
-    return 'NO'
+            return "YES"
+    return "NO"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     q = int(input().strip())
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
         result = twoStrings(s1, s2)
 
-        print('result: %s' % result)
+        print("result: %s" % result)
         # fptr.write(result + '\n')
 
     # fptr.close()

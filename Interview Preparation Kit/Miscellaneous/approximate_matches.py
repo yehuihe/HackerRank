@@ -1,8 +1,10 @@
 from collections.abc import Sequence
 
-from .binary_search import (binary_search,
-                            binary_search_alternative,
-                            binary_search_duplicate)
+from .binary_search import (
+    binary_search,
+    binary_search_alternative,
+    binary_search_duplicate,
+)
 
 
 def rank(A, n, T):
@@ -94,7 +96,7 @@ def successor(A, n, T):
         "Binary search algorithm." WikiJournal of Science, 2019, 2(1):5
         doi: 10.15347/wjs/2019.005 Encyclopedic Review Article
     """
-    return binary_search_duplicate(A, n, T, method='rightmost') + 1
+    return binary_search_duplicate(A, n, T, method="rightmost") + 1
 
 
 def nearest_neighbor(A, n, T):
@@ -124,6 +126,5 @@ def nearest_neighbor(A, n, T):
     """
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

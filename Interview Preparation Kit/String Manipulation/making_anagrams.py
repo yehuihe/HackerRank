@@ -1,4 +1,4 @@
-    #!/bin/python3
+#!/bin/python3
 
 import math
 import os
@@ -14,6 +14,7 @@ import sys
 #  1. STRING a
 #  2. STRING b
 #
+
 
 def makeAnagram(a, b):
     """Anagram encryption scheme
@@ -39,7 +40,7 @@ def makeAnagram(a, b):
     return sum(abs(v) for v in count_a.values())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     a = input()
@@ -48,7 +49,7 @@ if __name__ == '__main__':
 
     res = makeAnagram(a, b)
 
-    print('result: %s' % res)
+    print("result: %s" % res)
 
     # fptr.write(str(res) + '\n')
 

@@ -12,6 +12,7 @@ import sys
 # The function accepts INTEGER_ARRAY q as parameter.
 #
 
+
 def minimumBribes(q):
     """Determine the minimum number of bribes
 
@@ -33,16 +34,16 @@ def minimumBribes(q):
     while True:
         swapped = False
         count = 0
-        for i in range(len(q)-1):
+        for i in range(len(q) - 1):
             # if this pair is out of order
-            if q[i] > q[i+1]:
+            if q[i] > q[i + 1]:
                 # swap them and remember something changed
-                q[i], q[i+1] = q[i+1], q[i]
+                q[i], q[i + 1] = q[i + 1], q[i]
                 swapped = True
                 bribes += 1
                 count += 1
                 if count > 2:
-                    print('Too chaotic')
+                    print("Too chaotic")
                     return
             else:
                 count = 0
@@ -51,7 +52,7 @@ def minimumBribes(q):
     print(bribes)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = int(input().strip())
 
     for t_itr in range(t):

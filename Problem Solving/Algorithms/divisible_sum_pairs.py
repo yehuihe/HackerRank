@@ -16,6 +16,7 @@ import sys
 #  3. INTEGER_ARRAY ar
 #
 
+
 def divisibleSumPairs(n, k, ar):
     """Divisible Sum Pairs solutions
 
@@ -37,13 +38,13 @@ def divisibleSumPairs(n, k, ar):
     """
     res = 0
     for i in range(len(ar)):
-        for j in range(i+1, len(ar)):
+        for j in range(i + 1, len(ar)):
             if (ar[i] + ar[j]) % k == 0:
                 res += 1
     return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     first_multiple_input = input().rstrip().split()
@@ -56,7 +57,7 @@ if __name__ == '__main__':
 
     result = divisibleSumPairs(n, k, ar)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 

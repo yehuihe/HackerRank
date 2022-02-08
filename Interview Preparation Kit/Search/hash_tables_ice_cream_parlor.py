@@ -14,6 +14,7 @@ import sys
 #  2. INTEGER money
 #
 
+
 def binary_search(A, n, T):
     L = 0
     R = n - 1
@@ -41,8 +42,8 @@ def whatFlavors(cost, money):
     """
     record = {}
     for i, v in enumerate(cost):
-        if money-v in record:
-            print(record[money-v], i+1)
+        if money - v in record:
+            print(record[money - v], i + 1)
         record[v] = i + 1
 
     # O(n^2) solution. Not suitable for HackerRank
@@ -52,7 +53,7 @@ def whatFlavors(cost, money):
     #             print(i+1, j+1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = int(input().strip())
 
     for t_itr in range(t):

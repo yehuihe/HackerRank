@@ -15,6 +15,7 @@ import sys
 #  2. INTEGER_ARRAY height
 #
 
+
 def hurdleRace(k, height):
     """The hurdle race solution
 
@@ -34,7 +35,7 @@ def hurdleRace(k, height):
     return max(height) - k if max(height) - k >= 0 else 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     first_multiple_input = input().rstrip().split()
@@ -47,7 +48,7 @@ if __name__ == '__main__':
 
     result = hurdleRace(k, height)
 
-    print('result: %s' % result)
+    print("result: %s" % result)
 
     # fptr.write(str(result) + '\n')
 
