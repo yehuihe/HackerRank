@@ -31,6 +31,7 @@ def gridSearch(G, P):
                 for k in range(r):
                     if G[i + k][j : j + c] != P[k]:
                         flag = False
+                        break
                 if flag is True:
                     return "YES"
     return "NO"
